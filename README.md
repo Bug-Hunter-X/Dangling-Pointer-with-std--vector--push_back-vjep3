@@ -1,0 +1,3 @@
+# Dangling Pointer with std::vector::push_back
+
+This example showcases a common error in C++ where a pointer to a `std::vector`'s elements becomes invalid after resizing the vector using `push_back`.  The initial loop correctly prints the elements. However, after `push_back(10)`, the memory location pointed to by `ptr` might be reallocated, making the second loop's behavior unpredictable (and likely to crash).
